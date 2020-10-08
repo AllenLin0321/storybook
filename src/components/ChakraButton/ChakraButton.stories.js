@@ -17,6 +17,8 @@ const Template = args => <Button {...args} />;
 
 export const Success = Template.bind({});
 export const Danger = Template.bind({});
+export const Log = Template.bind({});
+
 Success.args = {
   variantColor: "green",
   children: "Success",
@@ -27,4 +29,10 @@ Danger.args = {
   variantColor: "red",
   children: "Danger",
   ...actions("onClick", "onMouseOver"),
+};
+
+Log.args = {
+  variantColor: "blue",
+  children: "Log",
+  onClick: () => console.log("Button Clicked!"),
 };
