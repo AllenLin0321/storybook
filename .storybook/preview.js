@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider, theme, CSSReset, Box } from "@chakra-ui/core";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,8 +14,11 @@ export const parameters = {
 // global decorators
 export const decorators = [
   Story => (
-    <div style={{ padding: "3em" }}>
-      <Story />
-    </div>
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Box m="4">
+        <Story />
+      </Box>
+    </ThemeProvider>
   ),
 ];
