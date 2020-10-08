@@ -1,9 +1,17 @@
 ﻿import React from "react";
 import Button from "./Button";
+import Center from "../Center/Center";
 
 export default {
   title: "form/Button",
   component: Button,
+  decorators: [
+    Story => (
+      <Center>
+        <Story />
+      </Center>
+    ),
+  ],
 };
 
 // Create a "template" of how args map to rendering
@@ -17,20 +25,20 @@ export const Danger = Template.bind({});
 
 Primary.args = {
   variant: "primary",
-  children: "Primary Args",
+  children: "Primary",
 };
 
 Secondary.args = {
   variant: "secondary",
-  children: "Secondary Args",
+  children: "Secondary",
 };
 
 Success.args = {
   variant: "success",
-  children: "Success Args",
+  children: "Success",
 };
 
 Danger.args = {
   variant: "danger",
-  children: "Danger Args",
+  children: "Danger",
 };

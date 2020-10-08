@@ -2,7 +2,7 @@
 import "./Button.css";
 
 function Button(props) {
-  const { variant = "primary", children, ...rest } = props;
+  const { variant = "primary", children = "Primary", ...rest } = props;
   return (
     <div>
       <button className={`button ${variant} `} {...rest}>
